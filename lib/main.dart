@@ -7,9 +7,44 @@ void main()
 {
   runApp(MaterialApp(
     title: "Exploring UI",
-    home: Home(),
+    home: Scaffold(
+      body: getListView(),
+      appBar: AppBar(title: Text("List View")),
+    ),
   ));
 }
+
+Widget getListView()
+{
+  var listView=ListView(
+    children: <Widget>[
+
+      ListTile(
+        leading: Icon(Icons.landscape),
+        title: Text("Landscape View"),
+        subtitle: Text("BEautiful view of Landscape"),
+        trailing: Icon(Icons.wb_sunny),
+      ),
+
+      ListTile(
+        leading: Icon(Icons.laptop),
+        title: Text("Lands"),
+      ),
+
+      ListTile(
+        leading: Icon(Icons.phone),
+        title: Text("Phone"),
+        trailing: Icon(Icons.phone_android),
+      )
+
+
+    ],
+  );
+
+  return listView;
+}
+
+
 
 /*class MyFlutterApp extends StatelessWidget
 {
