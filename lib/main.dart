@@ -7,6 +7,7 @@ void main()
 {
   runApp(MaterialApp(
     title: "Exploring UI",
+    debugShowCheckedModeBanner: false,
     home: Scaffold(
       body: getListView(),
       appBar: AppBar(title: Text("List View")),
