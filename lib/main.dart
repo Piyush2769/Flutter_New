@@ -24,7 +24,7 @@ Widget getListView()
         leading: Icon(Icons.landscape),
         title: Text("Landscape View"),
         subtitle: Text("BEautiful view of Landscape"),
-        trailing: Icon(Icons.wb_sunny),
+        trailing: Icon(Icons.delete),
       ),
 
       ListTile(
@@ -45,7 +45,14 @@ Widget getListView()
   return listView;
 }
 
+void showSnackbar(BuildContext context)
+{
+  var snackbar=SnackBar(
+    content: Text(""),
+  );
 
+  Scaffold.of(context).showSnackBar(snackbar);
+}
 
 /*class MyFlutterApp extends StatelessWidget
 {
